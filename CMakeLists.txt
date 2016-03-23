@@ -1,0 +1,13 @@
+cmake_minimum_required (VERSION 2.8)
+
+PROJECT(ped)
+
+FIND_PACKAGE( OpenCV )
+SET(CMAKE_BUILD_TYPE Release)
+SET(SRC main.cpp Pedestrian_ICRA.cpp)
+
+
+
+ADD_EXECUTABLE( ${PROJECT_NAME} ${SRC} )
+TARGET_LINK_LIBRARIES( ${PROJECT_NAME}  ${OpenCV_LIBS} )
+
